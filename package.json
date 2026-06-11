@@ -1,0 +1,11 @@
+{
+  "name": "hello-word",
+  "version": "1.0.0",
+  "description": "Simple Node.js frontend page showing helloai coding on port 3000",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
