@@ -36,7 +36,7 @@ def format_currency(value: float) -> str:
 
 
 def render_add_record() -> None:
-    st.header("添加记录")
+    st.header("记账本")
     with st.form("add_record_form"):
         amount = st.number_input("金额", min_value=0.01, step=0.01, format="%.2f")
         category = st.selectbox("分类", DEFAULT_CATEGORIES)
@@ -127,9 +127,9 @@ def render_stats() -> None:
 
 def main() -> None:
     st.sidebar.title("导航")
-    page = st.sidebar.radio("页面", ["添加记录", "账目列表", "分类统计"])
+    page = st.sidebar.radio("页面", ["记账本", "账目列表", "分类统计"])
 
-    if page == "添加记录":
+    if page == "记账本":
         render_add_record()
     elif page == "账目列表":
         render_record_list()
