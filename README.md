@@ -53,16 +53,29 @@ streamlit run finance/web.py
 
 默认分类：餐饮、交通、购物、娱乐、居住、其他。
 
-## 运行 smoke test
+## 运行测试
+
+本项目提供两个测试方式：
+
+### 1. 烟雾测试
 
 ```bash
 python tests/smoke_test.py
 ```
 
-## 注意
+### 2. Pytest 单元测试
 
-- 提交的变更仅在本地仓库，不会自动推送到远程。 
-- commit message 使用简洁英文。
+```bash
+pytest
+```
+
+## 其他说明
+
+- 本地数据库文件会自动创建在用户主目录：
+  - Windows: `%USERPROFILE%\\.finance-cli\\data.db`
+  - macOS / Linux: `~/.finance-cli/data.db`
+- 默认分类：餐饮、交通、购物、娱乐、居住、其他。
+- 如果你希望忽略本地 Python 虚拟环境，请确保 `.venv/` 已添加到 `.gitignore`。
 
 ## 许可
 

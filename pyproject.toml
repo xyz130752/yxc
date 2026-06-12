@@ -1,0 +1,17 @@
+[project]
+name = "finance-cli"
+version = "0.1.0"
+description = "A simple Streamlit-based personal finance bookkeeping tool."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "streamlit"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

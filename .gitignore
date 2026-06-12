@@ -5,6 +5,18 @@
 .continue/
 .cody/
 
+# Python virtual env and caches
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
 # 密钥和凭证
 *.pem
 *.key
@@ -12,6 +24,7 @@ credentials.json
 .npmrc
 .aws/
 .ssh/
+.env
 
 # Python virtual env and caches
 .venv/
