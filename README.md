@@ -1,0 +1,69 @@
+# finance-cli
+
+一个简单的 Python Streamlit 记账工具，支持：
+
+- 添加账目（金额、分类、日期、备注）
+- 查看账目列表（按月份和分类筛选）
+- 删除账目（按 ID 删除）
+- 分类统计（统计表 + 柱状图）
+
+## 快速开始
+
+1. 创建并激活虚拟环境：
+
+```bash
+python -m venv .venv
+.venv\\Scripts\\activate
+```
+
+2. 安装依赖：
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+> 如果没有 `requirements.txt`，可以直接安装：
+
+```bash
+pip install streamlit
+```
+
+3. 运行应用：
+
+```bash
+streamlit run finance/web.py
+```
+
+## 项目结构
+
+- `finance/` - 应用包
+  - `models.py` - 数据模型（`DEFAULT_CATEGORIES`, `Category`, `Record`）
+  - `database.py` - 使用 SQLite 的数据库操作
+  - `web.py` - Streamlit 前端界面
+- `tests/smoke_test.py` - 简单的烟雾测试脚本
+- `README.md` - 本文档
+
+## 数据库
+
+应用会在用户主目录下创建数据库文件：
+
+- Windows: `%USERPROFILE%\\.finance-cli\\data.db`
+- macOS / Linux: `~/.finance-cli/data.db`
+
+默认分类：餐饮、交通、购物、娱乐、居住、其他。
+
+## 运行 smoke test
+
+```bash
+python tests/smoke_test.py
+```
+
+## 注意
+
+- 提交的变更仅在本地仓库，不会自动推送到远程。 
+- commit message 使用简洁英文。
+
+## 许可
+
+MIT
