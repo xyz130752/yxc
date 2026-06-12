@@ -12,3 +12,18 @@ credentials.json
 .npmrc
 .aws/
 .ssh/
+
+# Python virtual env and caches
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local env
+.env
